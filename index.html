@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy Birthday</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="page on" id="p1">
+  <div class="row" id="ph-opening"></div>
+  <h1 class="script">Happy Birthday</h1>
+  <div class="name script" data-name></div>
+  <div data-date></div>
+  <button class="btn" data-go="p2">TAP FOR SURPRISE</button>
+</section>
+
+<section class="page" id="p2">
+  <h2 class="script">Choose the Surprise</h2>
+  <div class="choices">
+    <button class="btn" data-go="p3">A Special Message</button>
+    <button class="btn" data-go="p4">Music</button>
+    <button class="btn" data-go="p5">Your Memories</button>
+  </div>
+</section>
+
+<section class="page top" id="p3">
+  <button class="btn sm" data-go="p2">&lsaquo; BACK</button>
+  <div class="name script" data-name></div>
+  <div class="row split" style="flex-direction:column">
+    <div class="letter" id="letter"></div>
+    <div class="row" id="ph-letter"></div>
+  </div>
+</section>
+
+<section class="page top" id="p4">
+  <button class="btn sm" data-go="p2">&lsaquo; BACK</button>
+  <div class="sp">
+    <div class="cover" id="cover"></div>
+    <div class="meta"><b id="tt"></b><span id="ta"></span></div>
+    <input type="range" id="seek" min="0" max="100" value="0" step="0.1" aria-label="Posisi lagu">
+    <div class="times"><span id="tc">0:00</span><span id="td">0:00</span></div>
+    <div class="ctrl">
+      <button id="prev" aria-label="Sebelumnya"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M6 5h2v14H6zM20 5v14L9 12z" fill="currentColor"/></svg></button>
+      <button id="pp" class="big" aria-label="Play"></button>
+      <button id="next" aria-label="Berikutnya"><svg viewBox="0 0 24 24" width="26" height="26"><path d="M16 5h2v14h-2zM4 5v14l11-7z" fill="currentColor"/></svg></button>
+    </div>
+    <div class="vol"><span>Vol</span><input type="range" id="vol" min="0" max="1" step=".05" value=".7" aria-label="Volume"></div>
+    <div class="list" id="list"></div>
+  </div>
+</section>
+
+<section class="page top" id="p5">
+  <button class="btn sm" data-go="p2">&lsaquo; BACK</button>
+  <h2 class="script">Your Memories</h2>
+  <div class="gal" id="ph-memories"></div>
+</section>
+<script src="script.js"></script>
+</body>
+</html>
